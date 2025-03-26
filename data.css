@@ -1,0 +1,205 @@
+body {
+  font-family: 'Malgun Gothic', sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.filter-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+}
+
+.filter-group label {
+  margin-right: 8px;
+  font-weight: bold;
+}
+
+select, input {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+button {
+  padding: 8px 16px;
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #3367d6;
+}
+
+#websites-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.website-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.website-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.website-screenshot {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+}
+
+.website-info {
+  padding: 15px;
+}
+
+.website-title {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.website-url {
+  color: #4285f4;
+  font-size: 14px;
+  margin-bottom: 8px;
+  word-break: break-all;
+}
+
+.website-category {
+  display: inline-block;
+  background-color: #f1f1f1;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.website-desc {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.website-notes {
+  font-size: 14px;
+  font-style: italic;
+  color: #666;
+}
+
+.website-date {
+  font-size: 12px;
+  color: #999;
+  text-align: right;
+  margin-top: 10px;
+}
+
+.website-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.website-actions button {
+  flex: 1;
+  padding: 6px 8px;
+  font-size: 13px;
+}
+
+.delete-btn {
+  background-color: #f44336;
+}
+
+.delete-btn:hover {
+  background-color: #d32f2f;
+}
+
+.no-websites {
+  text-align: center;
+  grid-column: 1 / -1;
+  padding: 40px;
+  color: #666;
+}
+
+.website-analysis-toggle {
+  margin-top: 12px;
+  padding: 5px;
+  background-color: #e1f5fe;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #0277bd;
+  text-align: center;
+  transition: background-color 0.2s;
+}
+
+.website-analysis-toggle:hover {
+  background-color: #b3e5fc;
+}
+
+.website-analysis {
+  margin-top: 8px;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 1.5;
+  white-space: pre-line;
+}
+
+/* 추가 CSS 스타일 */
+.website-media-info {
+  margin-top: 8px;
+  padding: 4px 8px;
+  background-color: #e8f5e9;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #2e7d32;
+}
+
+/* 복사 버튼 스타일 */
+.copy-btn {
+  background-color: #4caf50;
+}
+
+.copy-btn:hover {
+  background-color: #388e3c;
+}
+
+.copy-btn.copied {
+  background-color: #81c784;
+} 

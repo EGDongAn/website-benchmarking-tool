@@ -1,0 +1,97 @@
+body {
+  width: 350px;
+  padding: 15px;
+  font-family: 'Malgun Gothic', sans-serif;
+}
+
+h1 {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.form-group {
+  margin-bottom: 12px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+select, textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.checkbox-group label {
+  font-weight: normal;
+  margin-left: 5px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+button {
+  padding: 8px 12px;
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #3367d6;
+}
+
+#status-message {
+  margin-top: 10px;
+  text-align: center;
+  color: green;
+}
+
+#api-key-section {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #f8f8f8;
+  border-radius: 4px;
+}
+
+#analysis-section {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+#analysis-result {
+  white-space: pre-line;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.small-button {
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
+#analysis-loading {
+  color: #666;
+  font-style: italic;
+  margin-bottom: 10px;
+} 

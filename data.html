@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>저장된 웹사이트 목록</title>
+  <link rel="stylesheet" href="data.css">
+</head>
+<body>
+  <div class="container">
+    <h1>저장된 웹사이트 목록</h1>
+    
+    <div class="filter-section">
+      <div class="filter-group">
+        <label>카테고리 필터:</label>
+        <select id="category-filter">
+          <option value="all">전체</option>
+          <option value="sns">SNS</option>
+          <option value="blog">블로그</option>
+          <option value="homepage">홈페이지</option>
+          <option value="other">기타</option>
+        </select>
+      </div>
+      
+      <div class="filter-group">
+        <label>검색:</label>
+        <input type="text" id="search-input" placeholder="검색어 입력">
+      </div>
+      
+      <div class="export-buttons">
+        <button id="export-csv-btn">CSV 내보내기</button>
+        <button id="export-html-btn">HTML 내보내기</button>
+      </div>
+    </div>
+    
+    <div id="websites-container">
+      <!-- 여기에 웹사이트 목록이 동적으로 표시됩니다 -->
+    </div>
+  </div>
+  
+  <script src="data.js"></script>
+</body>
+</html> 
