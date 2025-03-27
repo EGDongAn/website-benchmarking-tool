@@ -13,6 +13,14 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // HTML 내보내기 버튼 이벤트 리스너
   document.getElementById('export-html-btn').addEventListener('click', exportHTML);
+  
+  // URL 파라미터 체크하여 자동 CSV 내보내기
+  const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.get('action') === 'exportcsv') {
+    setTimeout(function() {
+      exportCSV();
+    }, 1000); // 데이터 로드 후 CSV 내보내기 실행
+  }
 });
 
 // 웹사이트 데이터 로드 함수

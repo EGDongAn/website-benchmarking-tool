@@ -6,67 +6,80 @@
   <link rel="stylesheet" href="popup.css">
 </head>
 <body>
-  <h1>웹사이트 벤치마킹 저장기</h1>
-  
-  <div class="form-group">
-    <label>카테고리:</label>
-    <select id="category">
-      <option value="sns">SNS</option>
-      <option value="blog">블로그</option>
-      <option value="homepage">홈페이지</option>
-      <option value="other">기타</option>
-    </select>
-  </div>
-  
-  <div class="form-group">
-    <label>메모:</label>
-    <textarea id="notes" rows="3"></textarea>
-  </div>
-  
-  <div class="form-group">
-    <label>저장 항목:</label>
-    <div class="checkbox-group">
-      <input type="checkbox" id="save-title" checked>
-      <label for="save-title">제목</label>
-      
-      <input type="checkbox" id="save-url" checked>
-      <label for="save-url">URL</label>
-      
-      <input type="checkbox" id="save-desc">
-      <label for="save-desc">설명</label>
-      
-      <input type="checkbox" id="save-screenshot">
-      <label for="save-screenshot">스크린샷</label>
-    </div>
-  </div>
-  
-  <div class="checkbox-group">
-    <input type="checkbox" id="analyze-content">
-    <label for="analyze-content">콘텐츠 분석하기</label>
-  </div>
-  
-  <div id="api-key-section" style="display: none;">
+  <div class="container">
+    <h1>웹사이트 벤치마킹 저장기</h1>
+    
     <div class="form-group">
-      <label>OpenAI API 키:</label>
-      <input type="password" id="api-key" placeholder="OpenAI API 키 입력">
-      <button id="save-api-key" class="small-button">저장</button>
+      <label for="category">카테고리:</label>
+      <select id="category">
+        <option value="sns">SNS</option>
+        <option value="blog">블로그</option>
+        <option value="homepage">홈페이지</option>
+        <option value="other">기타</option>
+      </select>
     </div>
+    
+    <div class="form-group">
+      <label for="notes">메모:</label>
+      <textarea id="notes" rows="3" placeholder="메모를 입력하세요"></textarea>
+    </div>
+    
+    <div class="check-group">
+      <h3>저장 항목:</h3>
+      
+      <div class="check-grid">
+        <div class="check-item">
+          <input type="checkbox" id="save-title" checked>
+          <label for="save-title">제목</label>
+        </div>
+        
+        <div class="check-item">
+          <input type="checkbox" id="save-url" checked>
+          <label for="save-url">URL</label>
+        </div>
+        
+        <div class="check-item">
+          <input type="checkbox" id="save-desc" checked>
+          <label for="save-desc">Meta 설명</label>
+        </div>
+        
+        <div class="check-item">
+          <input type="checkbox" id="save-screenshot" checked>
+          <label for="save-screenshot">스크린샷</label>
+        </div>
+      </div>
+      
+      <div class="analyze-option">
+        <input type="checkbox" id="analyze-content">
+        <label for="analyze-content">콘텐츠 분석하기</label>
+      </div>
+    </div>
+    
+    <div id="api-key-section" style="display: none;">
+      <div class="form-group">
+        <label for="api-key">OpenAI API 키:</label>
+        <input type="password" id="api-key" placeholder="API 키를 입력하세요">
+        <button id="save-api-key">저장</button>
+      </div>
+      <div class="note">* API 키는 안전하게 로컬에만 저장되며 외부로 전송되지 않습니다.</div>
+    </div>
+    
+    <div id="analysis-section" style="display: none;">
+      <h3>콘텐츠 분석</h3>
+      <div id="analysis-loading">분석 중...</div>
+      <pre id="analysis-result"></pre>
+    </div>
+    
+    <div class="buttons">
+      <button id="save-btn">저장하기</button>
+      <button id="view-data-btn">저장 목록 보기</button>
+      <button id="export-csv-btn">CSV 내보내기</button>
+    </div>
+    
+    <div id="status-message"></div>
   </div>
   
-  <div class="buttons">
-    <button id="save-btn">저장하기</button>
-    <button id="view-data-btn">저장 목록 보기</button>
-    <button id="export-csv-btn">CSV 내보내기</button>
-  </div>
-  
-  <div id="analysis-section" style="display: none;">
-    <h3>콘텐츠 분석 결과</h3>
-    <div id="analysis-loading">분석 중입니다. 잠시 기다려주세요...</div>
-    <div id="analysis-result"></div>
-  </div>
-  
-  <div id="status-message"></div>
-  
+  <!-- 스크립트는 body 맨 아래에 -->
   <script src="popup.js"></script>
 </body>
 </html> 

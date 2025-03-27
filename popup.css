@@ -94,4 +94,37 @@ button:hover {
   color: #666;
   font-style: italic;
   margin-bottom: 10px;
+}
+
+/* 체크박스 그리드 디자인 추가 */
+.check-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 12px;
+  background-color: #f8f9fa;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.check-item {
+  display: flex;
+  align-items: center;
+}
+
+.check-item input[type="checkbox"] {
+  margin-right: 6px;
+}
+
+.analyze-option {
+  margin-top: 8px;
+  padding: 8px;
+  background-color: #e3f2fd;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+}
+
+.analyze-option input[type="checkbox"] {
+  margin-right: 6px;
 } 

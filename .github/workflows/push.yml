@@ -1,0 +1,35 @@
+name: Auto Push
+
+on:
+  push:
+    branches:
+      - main  # 푸시할 브랜치 이름
+
+jobs:
+  push:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'  # 사용할 Node.js 버전
+
+      - name: Install dependencies
+        run: npm install  # 필요한 의존성 설치
+
+      - name: Build project
+        run: npm run build  # 프로젝트 빌드
+
+      - name: Push changes
+        run: |
+          git config --local user.name "EGDongAn"
+          git config --local user.email "admin@wizu.kr"
+          git add .
+          git commit -m "Automated commit"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # GitHub 토큰 사용
